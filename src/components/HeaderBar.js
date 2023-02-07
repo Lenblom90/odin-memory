@@ -1,10 +1,8 @@
 import "../styles/HeaderBar.css"
 
-export default function HeaderBar() {
+export default function HeaderBar({score, bestScore}) {
     const title = "Memory";
     const description = "this is how you play this game: ";
-    const score = 0;
-    const bestScore = 0;
 
     return (
         <div className="HeaderBar">
