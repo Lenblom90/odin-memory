@@ -6,15 +6,13 @@ import knight3 from '../images/knight3.png';
 import knight4 from '../images/knight4.jpeg';
 import knight5 from '../images/knight5.jpeg';
 import knight6 from '../images/knight6.jpeg';
-import { useState } from "react";
+import { useEffect, useState } from "react";
 
 
 
 export default function CardLayout({resetScore, updateScore}) {
 
-    const [selected, setSelected] = useState([]);
-
-    const playingcards = [
+    const playingCards = [
         {
             id: 1,
             name: "Knight", 
@@ -47,6 +45,10 @@ export default function CardLayout({resetScore, updateScore}) {
         },
     ]
 
+    const [selected, setSelected] = useState([]);
+    const [positions, setPositions] = useState(playingCards.map((value, index) => value))
+    
+
     const handleCardClick = (id) => {
         if(!selected.includes(id)){
             updateScore();
@@ -59,12 +61,18 @@ export default function CardLayout({resetScore, updateScore}) {
         rearrangeCards();
     }
 
-    const cards = playingcards.map((card) => {
+    const cards = positions.map((card) => {
         return <Card id={card.id} src={card.src} name={card.name} key={card.id} onClick={handleCardClick} />
     });
 
     const rearrangeCards = () => {
-        console.log("TODO rearrange cards")
+        for (let i = playingCards.length -1; i > 0; i--){
+            const j = Math.floor(Math.random() * i)
+            const k = playingCards[i];
+            playingCards[i] = playingCards[j];
+            playingCards[j] = k; 
+        }
+        setPositions(playingCards);
     }
 
     return (
