@@ -6,7 +6,7 @@ import knight3 from '../images/knight3.png';
 import knight4 from '../images/knight4.jpeg';
 import knight5 from '../images/knight5.jpeg';
 import knight6 from '../images/knight6.jpeg';
-import { useEffect, useState } from "react";
+import { useState } from "react";
 
 
 
@@ -15,32 +15,32 @@ export default function CardLayout({resetScore, updateScore}) {
     const playingCards = [
         {
             id: 1,
-            name: "Knight", 
+            name: "Knight Rider", 
             src: knight1
         },
         {
             id: 2,
-            name: "Knight", 
+            name: "Casual Knight", 
             src: knight2
         },
         {
             id: 3,
-            name: "Knight", 
+            name: "Glowing Knight", 
             src: knight3
         },
         {
             id: 4,
-            name: "Knight", 
+            name: "Dead Knight", 
             src: knight4
         },
         {
             id: 5,
-            name: "Knight", 
+            name: "Battle Knight", 
             src: knight5
         },
         {
             id: 6,
-            name: "Knight", 
+            name: "Crusader", 
             src: knight6
         },
     ]

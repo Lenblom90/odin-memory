@@ -7,6 +7,12 @@
     flex-direction: column;
     align-items: center;
     justify-content: space-around;
+    background:linear-gradient(#fff, #000);
+    color: aliceblue;
+}
+
+.card:hover {
+    box-shadow: 0px 0px 10px #0f0f0f;
 }
 
 .card-img {

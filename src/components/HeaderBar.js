@@ -1,8 +1,8 @@
 import "../styles/HeaderBar.css"
 
 export default function HeaderBar({score, bestScore}) {
-    const title = "Memory";
-    const description = "this is how you play this game: ";
+    const title = "Medieval memory";
+    const description = "Remember the cards you clicked and try to click all the cards once.";
 
     return (
         <div className="HeaderBar">

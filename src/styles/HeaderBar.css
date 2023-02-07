@@ -3,7 +3,14 @@
     gap: 20px;
     justify-content: space-between;
     align-items: center;
-    background-color:darksalmon;
     color:aliceblue;
     padding: 10px;
+}
+
+.header-text {
+    padding: 5px;
+}
+
+.title {
+    padding-bottom: 5px;
 }
